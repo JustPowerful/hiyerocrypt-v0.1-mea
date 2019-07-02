@@ -1,6 +1,6 @@
-# this is an uncompleted encryption project
-# you might find some errors or some problems
-# you can find an example in test.py
+# you might find some errors or some problems .
+# this project is not completed yet .
+# you can find an example in test.py .
 
 
 def encrypt(E_STRING, E_KEY):
