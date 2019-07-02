@@ -17,7 +17,7 @@ def encrypt(E_STRING, E_KEY):
 
     while (i <= STRLEN - 2):
         i += 1
-        ENCRYPTED_ASCII = ord(E_STRING[i]) * E_KEY
+        ENCRYPTED_ASCII = ord(E_STRING[i]) * int(E_KEY)
         ENCRYPTED_STRING = chr(ENCRYPTED_ASCII)
         if (ENCRYPTED_ASCII <= 255):
             ENCRYPTED_OUTPUT.append(ENCRYPTED_STRING)
@@ -67,7 +67,7 @@ def decrypt(D_STRING, D_KEY):
 
     while (t <= DARRLEN - 2):
         t += 1
-        DECRYPTED_ASCII = int(DECRYPT_OUTPUT[t] / D_KEY)
+        DECRYPTED_ASCII = int(DECRYPT_OUTPUT[t] / int(D_KEY))
         DTOASCII = chr(DECRYPTED_ASCII)
         DECRYPTED_ARRAY.append(DTOASCII)
         DSTRING_OUTPUT += DECRYPTED_ARRAY[t]
