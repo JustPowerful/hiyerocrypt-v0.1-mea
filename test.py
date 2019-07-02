@@ -2,5 +2,7 @@
 import functions as fn
 
 # using the function
-var = fn.encrypt("hello", 2)
-print(var)
+enc = fn.encrypt("Hello World", 2)
+print("Encrypted :", enc)
+dec = fn.decrypt(enc, 2)
+print("Decrpyted :", dec)
