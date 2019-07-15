@@ -2,8 +2,13 @@
 # you might find some errors or some problems
 # you can find an example in test.py
 
+# LIST = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 127, 144, 132, 134, 136, 138,
+#  140, 142, 144, 146, 148, 150, 152, 154, 156, 158, 160, 130, 132, 134, 136, 138, 140, 142, 144, 146, 148, 150, 152, 154, 156, 158, 160]
 
-def encrypt(E_STRING, E_KEY):
+LIST = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P"]
+APPL = ["Д", "Ь", "ξ", "Δ", "Э", "Ч", "Б", "Ц", "φ", "Г", "χ", "π", "ψ" ,"ω" ,"Ю", "Ω"]
+
+def encrypt(E_STRING):
     STRLEN = len(E_STRING)
 
     # entered string vars
@@ -13,20 +18,24 @@ def encrypt(E_STRING, E_KEY):
     # used vars
     ENCRYPTED_OUTPUT = []
     STRING_OUTPUT = ""
-    LIST = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 127, 144, 132, 134, 136, 138,
-     140, 142, 144, 146, 148, 150, 152, 154, 156, 158, 160, 130, 132, 134, 136, 138, 140, 142, 144, 146, 148, 150, 152, 154, 156, 158, 160]
+
+
+
 
     # while loop
 
     while (i <= STRLEN - 2):
         i += 1
-        ENCRYPTED_ASCII = ord(E_STRING[i]) * int(E_KEY)
+        ENCRYPTED_ASCII = ord(E_STRING[i]) * 2
         ENCRYPTED_STRING = chr(ENCRYPTED_ASCII)
         if (ENCRYPTED_ASCII <= 255):
-            if (ENCRYPTED_ASCII in LIST):
-                # (MEA-E) means "Multiplying Encryption Algorithm Error"
-                # The multiplying encryption algorithm can't encrypt all uppercase chars
-                ENCRYPTED_OUTPUT.append("(MEA-E) ")
+            if (E_STRING[i] in LIST):
+                INDEX = LIST.index(E_STRING[i])
+                ENCRYPTED_OUTPUT.append(APPL[INDEX])
+
+                # # (MEA-E) means "Multiplying Encryption Algorithm Error"
+                # # The multiplying encryption algorithm can't encrypt all uppercase chars
+                # ENCRYPTED_OUTPUT.append("(MEA-E) ")
             else :
                 ENCRYPTED_OUTPUT.append(ENCRYPTED_STRING)
         else :
@@ -52,32 +61,31 @@ def encrypt(E_STRING, E_KEY):
     return STRING_OUTPUT
 
 
-def decrypt(D_STRING, D_KEY):
+def decrypt(D_STRING):
 
-    # user vars
-    s = -1
-    DSTRLEN = len(D_STRING)
-    DECRYPT_OUTPUT = []
+    n = -1
+    DLEN = len(APPL)
 
-    # while loop
-    while (s <= DSTRLEN - 2):
-        s += 1
-        DECRYPT_OUTPUT.append(ord(D_STRING[s]))
+    DECRYPTED_OUTPUT = []
 
-    # 2nd loop vars
-    DARRLEN = len(DECRYPT_OUTPUT)
-    DECRYPTED_ASCII = 0
-    DTOASCII = 0
-    DECRYPTED_ARRAY = []
-    DSTRING_OUTPUT = ""
+    while (n <= DLEN):
+        n += 1
+        if (D_STRING[n] in APPL):
+            DINDEX = APPL.index(D_STRING[n])
+            DECRYPTED_OUTPUT.append(LIST[DINDEX])
+        else :
+            DINT = int(ord(D_STRING[n]) / 2)
+            DCHAR = chr(DINT)
+            DECRYPTED_OUTPUT.append(DCHAR)
 
-    t = -1
+    k = -1
+    DFINALLEN = len(DECRYPTED_OUTPUT) - 2
+    OUT_STRING = ""
 
-    while (t <= DARRLEN - 2):
-        t += 1
-        DECRYPTED_ASCII = int(DECRYPT_OUTPUT[t] / int(D_KEY))
-        DTOASCII = chr(DECRYPTED_ASCII)
-        DECRYPTED_ARRAY.append(DTOASCII)
-        DSTRING_OUTPUT += DECRYPTED_ARRAY[t]
+    while (k <= DFINALLEN):
+        k += 1
+        OUT_STRING += DECRYPTED_OUTPUT[k]
 
-    return DSTRING_OUTPUT
+    return OUT_STRING
+    # print(DECRYPTED_OUTPUT[16])
+
