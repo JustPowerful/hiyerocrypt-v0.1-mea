@@ -5,12 +5,18 @@ import functions
 ```
 you can find an example on ``test.py``
 
-- now you can use the functions :
+- MEA Encryption Method :
 ```
 import functions as fn
 
 var = fn.encrypt("hello")
 print(var)
 ```
-you can see "hello" is the string that we want to encrypt ,  done !
-you can print the output to see what will happen !
+
+- MEA Decryption Method :
+```
+import functions as fn
+
+var = fn.decrypt("ÐÊØØÞ")
+print(var)
+```
