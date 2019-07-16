@@ -1,9 +1,6 @@
-# this is an uncompleted encryption project
-# you might find some errors or some problems
-# you can find an example in test.py
-
-# LIST = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 127, 144, 132, 134, 136, 138,
-#  140, 142, 144, 146, 148, 150, 152, 154, 156, 158, 160, 130, 132, 134, 136, 138, 140, 142, 144, 146, 148, 150, 152, 154, 156, 158, 160]
+# YOU MIGHT FIND SOME ERRORS AND BUGS IN THIS PROGRAM
+# YOU CAN REPORT IT USING THE ISSUES REPORT IN GITHUB
+# YOU CAN FIND AN EXAMPLE ON HOW TO USE THE SCRIPT ON test.py
 
 LIST = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P"]
 APPL = ["Д", "Ь", "ξ", "Δ", "Э", "Ч", "Б", "Ц", "φ", "Г", "χ", "π", "ψ" ,"ω" ,"Ю", "Ω"]
@@ -18,9 +15,6 @@ def encrypt(E_STRING):
     # used vars
     ENCRYPTED_OUTPUT = []
     STRING_OUTPUT = ""
-
-
-
 
     # while loop
 
@@ -64,7 +58,7 @@ def encrypt(E_STRING):
 def decrypt(D_STRING):
 
     n = -1
-    DLEN = len(APPL)
+    DLEN = len(D_STRING) - 2
 
     DECRYPTED_OUTPUT = []
 
@@ -87,5 +81,3 @@ def decrypt(D_STRING):
         OUT_STRING += DECRYPTED_OUTPUT[k]
 
     return OUT_STRING
-    # print(DECRYPTED_OUTPUT[16])
-
