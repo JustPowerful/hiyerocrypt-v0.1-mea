@@ -14,17 +14,17 @@ you can find an example on ``test.py``
 
 - MEA Encryption Method :
 ```
-import functions as fn
+import mea
 
-var = fn.encrypt("hello")
+var = mea.encrypt("hello")
 print(var)
 ```
 
 - MEA Decryption Method :
 ```
-import functions as fn
+import mea
 
-var = fn.decrypt("ÐÊØØÞ")
+var = mea.decrypt("ÐÊØØÞ")
 print(var)
 ```
 ## Authors :
