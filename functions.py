@@ -1,16 +1,17 @@
-# YOU MIGHT FIND SOME ERRORS AND BUGS IN THIS SCRIPT
+# YOU MIGHT FIND SOME ERRORS AND BUGS IN THIS PROGRAM
 # YOU CAN REPORT IT USING THE ISSUES REPORT IN GITHUB
 # YOU CAN FIND AN EXAMPLE ON HOW TO USE THE SCRIPT ON test.py
 
-LIST = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P"]
-APPL = ["Д", "Ь", "ξ", "Δ", "Э", "Ч", "Б", "Ц", "φ", "Г", "χ", "π", "ψ" ,"ω" ,"Ю", "Ω"]
+# (!) Don't delete this lists / Usefull lists
+# some alphabets can't be encrypted by the algorithm so they will be replace by this symbols
+LIST = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "é", "è", "ç", "à"]
+APPL = ["Д", "Ь", "ξ", "Δ", "Э", "Ч", "Б", "Ц", "φ", "Г", "χ", "π", "ψ" ,"ω" ,"Ю", "Ω","色","马","白", "十"]
 
 def encrypt(E_STRING):
     STRLEN = len(E_STRING)
 
     # entered string vars
     i = -1
-    sum = 0
 
     # used vars
     ENCRYPTED_OUTPUT = []
@@ -22,7 +23,7 @@ def encrypt(E_STRING):
         i += 1
         ENCRYPTED_ASCII = ord(E_STRING[i]) * 2
         ENCRYPTED_STRING = chr(ENCRYPTED_ASCII)
-        if (ENCRYPTED_ASCII <= 255):
+        if (ENCRYPTED_ASCII != 0):
             if (E_STRING[i] in LIST):
                 INDEX = LIST.index(E_STRING[i])
                 ENCRYPTED_OUTPUT.append(APPL[INDEX])
@@ -34,11 +35,7 @@ def encrypt(E_STRING):
                 ENCRYPTED_OUTPUT.append(ENCRYPTED_STRING)
         else :
             # debugging
-            print("Try to lower your key !")
-
-        if (ENCRYPTED_ASCII == 0):
-            # debugging
-            print("You can't use zero !")
+            print("Error: if the key is zero you need to change it .")
 
 
     # 2nd loop var
