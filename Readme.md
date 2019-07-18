@@ -1,5 +1,7 @@
 ![LOGO](https://www.mediafire.com/convkey/e8c7/hbtduchh0f0bmzvzg.jpg)
 
+ - Check out the official code [website](https://justpowerful.github.io/Multiplying-encryption-algorithm/)
+
 # About the project :
 - the idea is not totally mine , my friend asked me if i can make an encryption algorithm to challenge the group to decrypt it , it was fun , i sent them "hello world" encrypted and decrypted and i told them to decrypt a another phrase .
 - the project is not totally completed you'll find some errors and bugs , if you want to report bugs just use [Issues Report](https://github.com/JustPowerful/Multiplying-encryption-algorithm/issues) 
