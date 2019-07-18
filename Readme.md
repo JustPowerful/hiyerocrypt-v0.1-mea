@@ -15,7 +15,7 @@ you can find an example on ``test.py``
 
 - MEA Encryption Method :
 
-```
+```python
 import mea
 
 var = mea.encrypt("hello")
@@ -25,7 +25,7 @@ print(var)
 
 - MEA Decryption Method :
 
-```
+```python
 import mea
 
 var = mea.decrypt("ÐÊØØÞ")
