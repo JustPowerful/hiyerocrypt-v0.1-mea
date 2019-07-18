@@ -7,26 +7,31 @@
 
 ## How to use ?
 - first you need to import the script , like this :
+
 ```python
 import functions
 ```
 you can find an example on ``test.py``
 
 - MEA Encryption Method :
+
 ```
 import mea
 
 var = mea.encrypt("hello")
 print(var)
+
 ```
 
 - MEA Decryption Method :
+
 ```
 import mea
 
 var = mea.decrypt("ÐÊØØÞ")
 print(var)
 ```
+
 ## Authors :
 
 - [JustPowerful](https://github.com/JustPowerful)
