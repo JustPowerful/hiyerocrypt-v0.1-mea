@@ -22,7 +22,6 @@ import mea
 
 var = mea.encrypt("hello")
 print(var)
-
 ```
 
 - MEA Decryption Method :
