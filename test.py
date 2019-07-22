@@ -1,8 +1,8 @@
 # importing the script
-import functions as fn
+import mea
 
 # using the function
-enc = fn.encrypt("Hello World")
+enc = mea.encrypt("Hello World")
 print("Encrypted :", enc)
-dec = fn.decrypt(enc)
+dec = mea.decrypt(enc)
 print("Decrpyted :", dec)
