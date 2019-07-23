@@ -27,7 +27,7 @@ print(ENCRYPTED)
 
 - MEA Decryption Method :
 
-```pythonÐÊØØÞ
+```python
 import mea
 api = mea.MEA()
 
