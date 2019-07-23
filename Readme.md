@@ -13,24 +13,26 @@
 ```python
 import functions
 ```
-you can find an example on ``test.py``
+you can find an example on ``example.py``
 
 - MEA Encryption Method :
 
 ```python
 import mea
+api = mea.MEA()
 
-var = mea.encrypt("hello")
-print(var)
+ENCRYPTED = api.encrypt("Hello World")
+print(ENCRYPTED)
 ```
 
 - MEA Decryption Method :
 
-```python
+```pythonÐÊØØÞ
 import mea
+api = mea.MEA()
 
-var = mea.decrypt("ÐÊØØÞ")
-print(var)
+DECRYPTED = api.decrypt("ЦÊØØÞ@®ÞäØÈ")
+print(DECRYPTED)
 ```
 
 ## Authors :
