@@ -12,7 +12,7 @@
 - first you need to import the script , like this :
 
 ```python
-import functions
+import mea
 ```
 you can find an example on ``example.py``
 
