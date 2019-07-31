@@ -4,7 +4,7 @@
 # some alphabets can't be encrypted by the algorithm so they will be replaced by this symbols
 # you can change the symbols but be carefull
 
-class MEA():
+class MEA:
 
     LIST = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "é", "è", "ç", "à"]
     APPL = ["Д", "Ь", "ξ", "Δ", "Э", "Ч", "Б", "Ц", "φ", "Г", "χ", "π", "ψ" ,"И" ,"Ю", "Ω", "₤", "$", "У", "Й"]
