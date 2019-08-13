@@ -19,7 +19,7 @@ import mea
 ```
 you can find an example on ``example.py``
 
-- MEA Encryption Method :
+- String Encryption Method :
 
 ```python
 import mea
@@ -29,7 +29,7 @@ ENCRYPTED = api.encrypt("Hello World")
 print(ENCRYPTED)
 ```
 
-- MEA Decryption Method :
+- String Decryption Method :
 
 ```python
 import mea
@@ -38,6 +38,29 @@ api = mea.MEA()
 DECRYPTED = api.decrypt("ЦÊØØÞ@®ÞäØÈ")
 print(DECRYPTED)
 ```
+
+- List encryption :
+
+```python
+from mea import LIST
+
+lst = LIST()
+
+# returns a encrypted list
+enclist = lst.enlist("hello world")
+```
+
+- List decryption:
+
+```python
+from mea import LIST
+
+lst = LIST()
+
+# returns a decrypted list
+declist = lst.delist("208 202 216 216 222 64 238 222 228 216 200") # don't forget to add the space between every ascii
+```
+
 
 ## Authors :
 
