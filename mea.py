@@ -4,6 +4,34 @@
 # some alphabets can't be encrypted by the algorithm so they will be replaced by this symbols
 # you can change the symbols but be carefull
 
+
+class LIST:
+    # encrypted ascii list
+    def enlist(self, E_STRING):
+        i = 0
+        STRLEN = len(E_STRING)
+        ORDLIST = []
+
+        while (i < STRLEN):
+            ORDLIST.append(ord(E_STRING[i]) * 2)
+            i += 1
+        return ORDLIST
+
+    # decrypted ascii list
+    def delist(self, E_STRING):
+        ASCIILIST = E_STRING.split(" ")
+        i = 0
+        LISTLEN = len(ASCIILIST)
+        CHRLIST = []
+
+        while (i < LISTLEN):
+            try:
+                CHRLIST.append(chr(int(ASCIILIST[i])))
+                i += 1
+            except ValueError:
+                CHRLIST.append("ERROR")
+        return CHRLIST
+
 class MEA:
 
     LIST = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "é", "è", "ç", "à"]
