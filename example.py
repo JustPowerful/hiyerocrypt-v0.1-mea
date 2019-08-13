@@ -1,13 +1,14 @@
-# IMPORT THE MODULE
-import mea
+from mea import MEA
+from mea import LIST
 
-# IMPORT THE CLASS
-api = mea.MEA()
+mea = MEA()
+lst = LIST()
 
-# USE THE MODLUE LIKE THIS
-ENCRYPTED = api.encrypt("Hello World")
-DECRYPTED = api.decrypt(ENCRYPTED)
+# returns a list of encrypted or decrypted ascii
+# CAPS ARE NOT SUPPORTED (Bug)
+enclist = lst.enlist("hello world")
+declist = lst.delist("208 202 216 216 222 64 238 222 228 216 200") # don't forget to add the space between every ascii
 
-# PRINT THE RESULTS
-print(ENCRYPTED)
-print(DECRYPTED)
+# returns an encrypted or a decrpyted string
+encstring = mea.encrypt("hello world")
+decstring = mea.decrypt(encstring)
