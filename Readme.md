@@ -6,6 +6,8 @@
 
  - Check out the official code [website](https://justpowerful.github.io/Multiplying-encryption-algorithm/)
 
+**Note :** *don't use this algorithm for important features like securing passwords, emails, etc .. <a href="https://github.com/JustPowerful/Multiplying-encryption-algorithm#about-the-project-">read about the project</a>*
+
 # About the project :
 - the idea is not totally mine , my friend asked me if i can make an encryption algorithm to challenge the group to decrypt it , it was fun , i sent them "hello world" encrypted and decrypted and i told them to decrypt a another phrase .
 - the project is not totally completed you'll find some errors and bugs , if you want to report bugs just use [Issues Report](https://github.com/JustPowerful/Multiplying-encryption-algorithm/issues) 
